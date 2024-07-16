@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+        
+    </head>
+    <body>
+        
+        <div id="mainBody" class="container">
+            <nav class="header-Container">
+                <div class="logo">
+                    <h1> <a href="./index.html">Marvel</a></h1>
+                </div>
+                <ul class="headr-ul">
+                    <li ><a id="home" href="./index.html">Home</a></li>
+                    <li ><a id="fav" href="./favourite.html">Favourite</a></li>
+                </ul>
+            </nav>
+
+            <div class="loading-animation" id="loader">
+                <div class="loader"></div>
+            </div>
+
+            <div class="content" id="charactersContainer">
+                <div class="content-search">
+                    <input id="searchInput" type="text">
+                    <button id="searchButton"><span class="material-symbols-outlined">search</span></button>
+                </div>
+
+                <div class="cards-container" id="characters">
+                    <div class="cards-body">
+                        <div class="card-img-container">
+                            <img src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg" class="card-img" alt="Hero1">
+                        </div>
+                        <div class="card-info-container">
+                            <div class="card-head">Hero1</div>
+                            <div class="card-action-btn">
+                                <button class="love-btn"> <span class="material-icons">favorite</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./script/main.js"></script>
+    </body>
+</html>
