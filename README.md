@@ -19,12 +19,29 @@ This application allows users to search for superheroes, view detailed informati
 
 ## Getting Started
 
-### Prerequisites
-- Node.js
-- npm
-
 ### Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/superhero-app.git
    cd superhero-app
+### Running the Application
+-  Open the index.html file in your browser to start the application.
+### Environment Variables
+-  ```javascript
+   const API_KEY = '<your-public-key>';
+   const HASH = '<your-md5-hash>';
+   const TIMESTAMP = '<time-stamp>';
+### Built With
+1. HTML
+2. CSS
+3. JavaScript
+### Acknowledgments
+-  Thanks to Marvel for providing the API used in this application.
+
+## Screenshots:
+
+### Home Page:
+
+### Hero Detail Page
+
+### Favorite Page
