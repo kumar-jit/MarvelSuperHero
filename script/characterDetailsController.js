@@ -4,6 +4,8 @@ import { hideLoading } from "./commonFun.js";
 // task on page loading
 async function onPageLoad(){
     let charId =  document.location.search.substring(1);
+
+    // handaling if no char id present to the current URL 
     if(charId.length == 0){
         window.open("index.html?","_self");
         return;

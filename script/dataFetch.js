@@ -15,7 +15,7 @@ export const getCharacters = async (parameter) => {
         const data = await response.json();
         return data.data.results;
     } catch (error) {
-        console.error('Error fetching characters:', error);
+        console.error('Error fetching characters:' + JSON.stringify(error));
         return [];
     }
 }

@@ -13,7 +13,9 @@
     </head>
 
     <body style="overflow: hidden;">
-        
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                               Header Nav                                -->
+        <!-- ----------------------------------------------------------------------- -->
         <div class="container">
             <nav class="header-Container">
                 <div class="logo">
@@ -24,24 +26,28 @@
                     <li id="fav"><a href="./favourite.html">Favourite</a></li>
                 </ul>
             </nav>
-
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                              Loader Screen                              -->
+            <!-- ----------------------------------------------------------------------- -->
             <div class="loading-animation" id="loader">
                 <div class="loader"></div>
             </div>
-
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                           Characters Details                            -->
+            <!-- ----------------------------------------------------------------------- -->
             <div class="content-details" id="characterDetailContainer">
                 <div class="character-heading-container">
-                    <h2 id="charName">My super herroasd</h2>
+                    <h2 id="charName"></h2>
                     <div class="desc-container">
-                        <marquee id="charDes">thius is my taf</marquee>
+                        <marquee id="charDes"></marquee>
                     </div>
                 </div>
                 <div class="char-des-container">
                     <div class="char-thum-container">
                         <div class="img-container">
                             <img id="charImg" class="char-img"
-                                src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/portrait_uncanny.jpg"
-                                alt="ge">
+                                src=""
+                                alt="">
                         </div>
                     </div>
                     <div id="all-details" class="all-details">
@@ -50,6 +56,6 @@
                 </div>
             </div>
         </div>
-        <script src="./script/characterDetails.js" type="module"></script>
+        <script src="./script/characterDetailsController.js" type="module"></script>
     </body>
 </html>
