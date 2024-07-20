@@ -27,7 +27,7 @@ This application allows users to search for superheroes, view detailed informati
 ### Running the Application
 -  Open the index.html file in your browser to start the application.
 ### Environment Variables
--  ```javascript
+```javascript
    const API_KEY = '<your-public-key>';
    const HASH = '<your-md5-hash>';
    const TIMESTAMP = '<time-stamp>';
