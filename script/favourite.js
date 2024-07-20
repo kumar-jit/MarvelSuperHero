@@ -28,6 +28,8 @@ async function renderAllCharacter(){
     const favCharactersContainer = document.getElementById("favCharactersContainer");
     hideLoading(favCharactersContainer);
 }
+
+// make active to current page
 function setPageActive(){
     document.getElementById("home").style.color = "rgb(167, 165, 165)";
     document.getElementById("fav").style.color = "white";

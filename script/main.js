@@ -2,7 +2,7 @@ import { getCharacters } from "./dataFetch.js";
 import { renderCharacters,hideLoading,showLoading } from "./commonFun.js";
 
 async function onPageLoad(){
-    charactersDivBulder(`limit=20&offset=${getRandomNumber()}&`);
+    charactersDivBulder(`limit=24&offset=${getRandomNumber()}&`);
     setPageActive();
 }
 
@@ -46,7 +46,7 @@ document.getElementById("searchButton").addEventListener("click", (event) => {
     charactersDivBulder(searchParameter);
 })
 
-
+// get random value
 function getRandomNumber() {
     return Math.floor(Math.random() * 1201);
 }

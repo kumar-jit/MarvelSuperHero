@@ -1,8 +1,8 @@
 import { getCharacterDetails } from "./dataFetch.js";
 import { hideLoading } from "./commonFun.js";
 
+// task on page loading
 async function onPageLoad(){
-    
     let charId =  document.location.search.substring(1);
     if(charId.length == 0){
         window.open("index.html?","_self");
@@ -14,11 +14,7 @@ async function onPageLoad(){
 }
 onPageLoad();
 
-
-function setPageActive(){
-    document.getElementById("home").style.color = "white";
-    document.getElementById("fav").style.color = "rgb(167, 165, 165)";
-}
+// rander the character details
 function renderCharacterInfo(oCharacter){
     const charNameE = document.getElementById("charName");
     charNameE.innerText = oCharacter.name;
@@ -95,4 +91,10 @@ function createCareerCard(name, oCareer) {
     return careerContainer;
 }
 
+
+// make active to current page
+function setPageActive(){
+    document.getElementById("home").style.color = "white";
+    document.getElementById("fav").style.color = "rgb(167, 165, 165)";
+}
 
