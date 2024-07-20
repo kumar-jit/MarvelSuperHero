@@ -2,6 +2,8 @@
 
 This application allows users to search for superheroes, view detailed information about them, and manage a list of favorite superheroes.
 
+ <a href="https://kumar-jit.github.io/MarvelSuperHero/">Live Demo</a>
+
 ## Features
 
 ### Home Page
