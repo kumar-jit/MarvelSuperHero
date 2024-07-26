@@ -2,11 +2,16 @@ import { getCharacters } from "./dataFetch.js";
 import { renderCharacters,hideLoading,showLoading } from "./commonFun.js";
 
 async function onPageLoad(){
-    charactersDivBulder(`limit=24&offset=${getRandomNumber()}&`);
     setPageActive();
+
+    //load all the character on page load
+    // charactersDivBulder(`limit=24&offset=${getRandomNumber()}&`);
+    
 }
 
-onPageLoad();
+window.addEventListener("load", ()=>{
+    onPageLoad();
+} );
 
 
 /* -------------------------------------------------------------------------- */
@@ -23,7 +28,7 @@ async function charactersDivBulder(searchParameter){
     });
 
     const charactersContainer = document.getElementById("charactersContainer");
-    hideLoading(charactersContainer);
+    // hideLoading(charactersContainer);
 }
 
 function setPageActive(){
@@ -41,7 +46,8 @@ document.getElementById("searchButton").addEventListener("click", (event) => {
     let searchParameter = (searchQuery.length > 0)? `nameStartsWith=${searchQuery}&limit=50&` : "limit=20&";
 
     // turn on the loading screen
-    showLoading(document.getElementById("charactersContainer"));
+    // showLoading(document.getElementById("charactersContainer"));
+
     // rerander the page
     charactersDivBulder(searchParameter);
 })

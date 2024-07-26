@@ -5,14 +5,16 @@ let oCharacters = [];
 const oJsonData = {
     characters : []
 };
-async function loadInitalData(){
+async function onPageLoad(){
     // rendaring char details
-    renderAllCharacter();
     setPageActive();
+    renderAllCharacter();
+    
 }
 
-
-loadInitalData();
+window.addEventListener("load", ()=>{
+    onPageLoad();
+} );
 
 async function renderAllCharacter(){
     const characters = document.getElementById('favCharacters');
@@ -21,12 +23,14 @@ async function renderAllCharacter(){
     const favCharList  = getAllFavouriteeChar();
     // getting char details from API
     let response = await getCharactersBatch(favCharList);
-    response.forEach((character,index) => {
-        characters.appendChild(renderCharacters(character.id,character.name, character.thumbnail.path + '.' + character.thumbnail.extension,"fav"));
-    })
-
-    const favCharactersContainer = document.getElementById("favCharactersContainer");
-    hideLoading(favCharactersContainer);
+    if(response){
+        response.forEach((character,index) => {
+            characters.appendChild(renderCharacters(character.id,character.name, character.thumbnail.path + '.' + character.thumbnail.extension,"fav"));
+            const favCharactersContainer = document.getElementById("favCharactersContainer");
+        })
+    }
+    
+    // hideLoading(favCharactersContainer);
 }
 
 // make active to current page

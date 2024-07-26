@@ -3,6 +3,8 @@ import { hideLoading } from "./commonFun.js";
 
 // task on page loading
 async function onPageLoad(){
+    setPageActive();
+
     let charId =  document.location.search.substring(1);
 
     // handaling if no char id present to the current URL 
@@ -12,9 +14,11 @@ async function onPageLoad(){
     }
     let s = await getCharacterDetails(charId);
     renderCharacterInfo(s[0]);
-    setPageActive();
+    
 }
-onPageLoad();
+window.addEventListener("load", ()=>{
+    onPageLoad();
+} );
 
 // rander the character details
 function renderCharacterInfo(oCharacter){
@@ -39,7 +43,7 @@ function renderCharacterInfo(oCharacter){
     allDetailsE.appendChild(eventsE);
 
     const characterDetailContainer = document.getElementById("characterDetailContainer");
-    hideLoading(characterDetailContainer,"flex");
+    // hideLoading(characterDetailContainer,"flex");
 }
 
 function createCareerCard(name, oCareer) {
