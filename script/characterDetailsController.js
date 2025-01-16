@@ -43,7 +43,7 @@ function renderCharacterInfo(oCharacter){
     allDetailsE.appendChild(eventsE);
 
     const characterDetailContainer = document.getElementById("characterDetailContainer");
-    // hideLoading(characterDetailContainer,"flex");
+    hideLoading(characterDetailContainer,"flex");
 }
 
 function createCareerCard(name, oCareer) {

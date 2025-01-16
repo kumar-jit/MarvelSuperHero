@@ -58,7 +58,7 @@ a{
 }
 
 #charactersContainer, #favCharactersContainer, #characterDetailContainer{
-    /* display: none; */
+    display: none;
 }
 
 

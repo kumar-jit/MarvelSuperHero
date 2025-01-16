@@ -1,5 +1,5 @@
-const publicKey = 'e589c1ca0e28cbe974414d1fbaf53135';
-const privateKey = '73643ba0337f7fb39e8ad13b917e9a0d354dae43';
+const publicKey = 'b67d4f43ce28b7f0ca868fd0ceefafb0';
+const privateKey = '06c217b1eda9d68f11b9ce315df8b886721ad299';
 const ts = new Date().getTime();
 const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
 const host = `https://gateway.marvel.com:443/v1/public/`;
@@ -21,7 +21,7 @@ export const getCharacters = async (parameter) => {
 }
 export const getCharacterDetails = async (id) => {
     try {
-        // const response = await fetch(getAbsoluteURL("character.json"));
+
         const response = await fetch(getAbsoluteURL(`characters/${id}?`));
         const data = await response.json();
         return data.data.results;

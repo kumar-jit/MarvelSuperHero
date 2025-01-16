@@ -1,5 +1,5 @@
 import { getCharactersBatch } from "./dataFetch.js";
-import {getAllFavouriteeChar} from "./localStorage.js";
+import {getAllFavChar} from "./localStorage.js";
 import { renderCharacters,hideLoading } from "./commonFun.js";
 let oCharacters = [];
 const oJsonData = {
@@ -20,7 +20,7 @@ async function renderAllCharacter(){
     const characters = document.getElementById('favCharacters');
     characters.innerHTML = "";
     // getting fav char ID from localstorage
-    const favCharList  = getAllFavouriteeChar();
+    const favCharList  = getAllFavChar();
     // getting char details from API
     let response = await getCharactersBatch(favCharList);
     if(response){

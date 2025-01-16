@@ -1,7 +1,10 @@
 
-
+/**
+ * Add Fav char Id to localstorage
+ * @param {*} characterId 
+ */
 export function addToFavouritee(characterId){
-    let characterLis = getAllFavouriteeChar();
+    let characterLis = getAllFavChar();
     characterId = (typeof characterId == "number")?JSON.stringify(characterId) : characterId;
     if(characterLis){
         if(!isFavChar(characterId)){
@@ -14,7 +17,11 @@ export function addToFavouritee(characterId){
     }
 }
 
-export function getAllFavouriteeChar(){
+/**
+ * Get All fav char Id from local sotrage
+ * @returns 
+ */
+export function getAllFavChar(){
     let char = localStorage.getItem("favChar");
     if(!char){
         return false;
@@ -24,8 +31,12 @@ export function getAllFavouriteeChar(){
     }
 }
 
+/**
+ * Remove a Fav char from Local sotrage
+ * @param {*} characterId 
+ */
 export function removeFavChar(characterId){
-    let characterLis = getAllFavouriteeChar();
+    let characterLis = getAllFavChar();
     characterId = (typeof characterId == "number")?JSON.stringify(characterId) : characterId;
     if(characterLis){
         if(isFavChar(characterId)){
@@ -36,11 +47,18 @@ export function removeFavChar(characterId){
 
 }
 
+/**
+ * Verify a char is fav or not
+ * @param {*} characterId 
+ * @returns 
+ */
 export function isFavChar(characterId){
-    let characterLis = getAllFavouriteeChar();
+    let characterLis = getAllFavChar();
     characterId = (typeof characterId == "number")?JSON.stringify(characterId) : characterId;
     if(characterLis){
         return characterLis.includes(characterId);
     }
     return false;
 }
+
+
